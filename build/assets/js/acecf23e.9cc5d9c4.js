@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkampistudio_docs=self.webpackChunkampistudio_docs||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"Blog","authorsListPath":"/blog/authors"}')}}]);
