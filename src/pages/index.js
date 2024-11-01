@@ -1,43 +1,58 @@
+import React from 'react';
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
-import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import { Redirect, useLocation } from '@docusaurus/router';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+const FeatureList = [
+  {
+    title: 'Quick Start Guides',
+    link: '/category/quick-start-guides',
+    Svg: require('@site/static/img/products.svg').default,
+    description: <>Get started with your product</>,
+  },
+  {
+    title: 'Troubleshooting',
+    link: '/category/troubleshooting',
+    Svg: require('@site/static/img/wrench.svg').default,
+    description: <>Find solutions to common problems and issues</>,
+  },
+];
+
+function Feature({ Svg, title, link, description }) {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
+    <div className={clsx('col col--4')}>
+      <div className="text--center">
+        <Svg className={styles.featureSvg} role="img" />
       </div>
-    </header>
+      <div className="text--center padding-horiz--md">
+        <h3>
+          <a style={{ color: 'inherit' }} href={link}>
+            {title}
+          </a>
+        </h3>
+        <p>{description}</p>
+      </div>
+    </div>
   );
 }
 
-export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+export default function HomepageFeatures() {
+  const location = useLocation();
+
+  // Redirect if the user is at the root URL
+  if (location.pathname === '/') {
+    return <Redirect to="/intro" />;
+  }
+
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
+    <section className={styles.features}>
+      <div className="container">
+        <div className="row" style={{ justifyContent: 'center' }}>
+          {FeatureList.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
