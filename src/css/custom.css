@@ -6,25 +6,32 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #6a1b9a; /* Purple */
+  --ifm-color-primary-dark: #4a148c; /* Dark Purple */
+  --ifm-color-primary-darker: #38006b; /* Darker Purple */
+  --ifm-color-primary-darkest: #24005f; /* Darkest Purple */
+  --ifm-color-primary-light: #8e24aa; /* Light Purple */
+  --ifm-color-primary-lighter: #ae7cba; /* Lighter Purple */
+  --ifm-color-primary-lightest: #d1c4e9; /* Lightest Purple */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(106, 27, 154, 0.1); /* Light Purple Highlight */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #ab47bc; /* Light Purple */
+  --ifm-color-primary-dark: #9c27b0; /* Purple */
+  --ifm-color-primary-darker: #8e24aa; /* Darker Purple */
+  --ifm-color-primary-darkest: #7b1fa2; /* Darkest Purple */
+  --ifm-color-primary-light: #ba68c8; /* Light Purple */
+  --ifm-color-primary-lighter: #e1bee7; /* Lightest Purple */
+  --ifm-color-primary-lightest: #f3e5f5; /* Very Light Purple */
+  --docusaurus-highlighted-code-line-bg: rgba(171, 71, 188, 0.3); /* Dark Purple Highlight */
+}
+
+
+/* Custom class to limit the max height of images */
+.img-max-height {
+  max-height: 400px;
+  width: auto;
 }
