@@ -19,6 +19,8 @@ const config = {
     locales: ['en'],
   },
 
+  favicon: 'img/favicon.ico',
+
   presets: [
     [
       'classic',
