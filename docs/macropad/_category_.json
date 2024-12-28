@@ -1,0 +1,8 @@
+{
+  "label": "MacroPad",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "The AmPi Studio Macropad is a keypad featuring 4 MX style keyswitches and 2 rotary encoders."
+  }
+}
