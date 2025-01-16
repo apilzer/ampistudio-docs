@@ -5,7 +5,7 @@ sidebar_position: 1
 <!-- ![Picture of Willow](/img/node_top_down_render.png) --> 
 Willow is a 36 key monoblock keyboard with choc hotswap switches. Willow arrives fully assembled, but may not be fully charged when it arrives. You can easily charge the keyboard by plugging in a standard USB-C cable to the USB-C port on the front of the board.
 
-<!-- ![Picture of charge port](/img/node_charge_ports.png) --> 
+<!-- ![Picture of chaexport GIT_USER=yourusernamerge port](/img/node_charge_ports.png) --> 
 
 To ensure Willow charges properly, please make sure the power switch is in the "On" position when plugging in to charge.
 
